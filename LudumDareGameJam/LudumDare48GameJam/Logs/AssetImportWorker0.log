@@ -406,3 +406,4 @@ Received Import Request.
 Start importing Assets/Deleteable/Ground.mat using Guid(80c8a3db864d86043a941c7ca75fc8f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '556cb1f65870f7867bf58b2fc608a6fa') in 0.018399 seconds
   Import took 0.021296 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
