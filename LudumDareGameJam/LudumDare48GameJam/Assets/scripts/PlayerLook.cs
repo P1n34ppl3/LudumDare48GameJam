@@ -12,9 +12,14 @@ public class PlayerLook : MonoBehaviour
     public float mouseSensetivity;
 
     public Transform player;
-    void Awake()
+    void OnEnable()
     {
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    void OnDisable()
+    {
+        Cursor.lockState = CursorLockMode.None;
     }
 
     void Update()
