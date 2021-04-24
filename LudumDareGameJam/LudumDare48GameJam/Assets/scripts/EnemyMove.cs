@@ -9,7 +9,12 @@ public class EnemyMove : MonoBehaviour
     public Rigidbody rb;
     public float speed;
     public float viewDistance;
-        void Update()
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+    void Update()
     {   
         if (Vector3.Distance(player.transform.position, transform.position) < viewDistance)
         {
