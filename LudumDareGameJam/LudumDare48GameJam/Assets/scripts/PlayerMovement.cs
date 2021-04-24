@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     bool IsGrounded()
-    {
+    {   
         float margin = 1f;
         return Physics.CheckBox(controller.bounds.center + Vector3.down * (controller.bounds.extents.y - margin + 0.01f), new Vector3(controller.bounds.extents.x, margin, controller.bounds.extents.z), Quaternion.Euler(0,0,0), groundLayer);
     }
