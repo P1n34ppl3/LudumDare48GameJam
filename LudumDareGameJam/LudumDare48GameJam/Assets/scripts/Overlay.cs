@@ -12,7 +12,9 @@ public class Overlay : MonoBehaviour
 
 
     void Start()
-    {
+    {   
+        Time.timeScale = 0;
+
         menu.SetActive(true);
 
         playerMovement = player.GetComponent<PlayerMovement>();
@@ -24,6 +26,8 @@ public class Overlay : MonoBehaviour
 
     public void PlayGame()
     {   
+        Time.timeScale = 1;
+
         menu.SetActive(false);
 
         playerMovement.enabled = true;
