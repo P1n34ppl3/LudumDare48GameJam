@@ -19,7 +19,7 @@ public class PlayerSleep : MonoBehaviour
     {
         GameObject Sleep = GameObject.FindWithTag("Sleep");
 
-        if (Vector3.Distance(Sleep.transform.position, transform.position) <= 2)
+        if (Vector3.Distance(Sleep.transform.position, transform.position) <= 15)
         {
             PressE.SetActive(true);
             if (Input.GetKey(KeyCode.E))
