@@ -34,7 +34,7 @@ public class Overlay : MonoBehaviour
 
         playerLook.enabled = true;
 
-        playerMovement.SleepingAnimation();
+
     }
 
     public void QuitGame()

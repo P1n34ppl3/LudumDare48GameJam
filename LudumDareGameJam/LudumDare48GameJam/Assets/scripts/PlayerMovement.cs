@@ -17,12 +17,12 @@ public class PlayerMovement : MonoBehaviour
     public float gravityStrength;
     public int jumpStrength;
     public LayerMask groundLayer;
-    public Animator sleepingAnimation;
+    
 
     void Awake()
     {
         controller = gameObject.GetComponent<CharacterController>();
-        sleepingAnimation = gameObject.GetComponent<Animator>();
+
     }
     void Update()
     {
@@ -57,14 +57,5 @@ public class PlayerMovement : MonoBehaviour
         return Physics.CheckBox(controller.bounds.center + Vector3.down * (controller.bounds.extents.y - margin + 0.01f), new Vector3(controller.bounds.extents.x, margin, controller.bounds.extents.z), Quaternion.Euler(0,0,0), groundLayer);
     }
 
-    public void SleepingAnimation()
-    {
-        sleepingAnimation.enabled = true;
-        Invoke("ExitSleepingAnimation", 10);
-    }
 
-    void ExitSleepingAnimation()
-    {
-        sleepingAnimation.enabled = false;
-    }
 }
