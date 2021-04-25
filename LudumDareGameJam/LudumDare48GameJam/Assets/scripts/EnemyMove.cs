@@ -20,37 +20,18 @@ public class EnemyMove : MonoBehaviour
         {
             followPlayer();
         }
-        else
-        {
-            rb.velocity = transform.forward * speed;
-        }
     }
 
     void followPlayer()
     {
-        float playerPosX;
-        playerPosX = player.transform.position.x;
-        float playerPosZ;
-        playerPosZ = player.transform.position.z;
+        var target = player.GetComponent<Transform>();
+        
+        var lookPos = target.position - transform.position;
+        lookPos.y = 0;
+        var rotation = Quaternion.LookRotation(lookPos);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 1);
 
-        float enemyPosX;
-        enemyPosX = transform.position.x;
-        float enemyPosZ;
-        enemyPosZ = transform.position.z;
-
-        float xDifference;
-        xDifference = playerPosX - enemyPosX;
-        float zDifference;
-        zDifference = playerPosZ - enemyPosZ;
-
-        double ricoDirection;
-        ricoDirection = zDifference/xDifference;
-
-        float angleDirection;
-        angleDirection = Convert.ToSingle(Math.Atan(ricoDirection));
-
-       transform.rotation = Quaternion.Euler(0, angleDirection, 0);
-
-        rb.velocity = transform.forward * speed;
+        
+        rb.velocity = new Vector3(0, rb.velocity.y, 0) + transform.forward * speed;
     }
 }
