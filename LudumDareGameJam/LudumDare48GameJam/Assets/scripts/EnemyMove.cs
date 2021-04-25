@@ -46,15 +46,11 @@ public class EnemyMove : MonoBehaviour
         double ricoDirection;
         ricoDirection = zDifference/xDifference;
 
-        double angleDirection;
-        angleDirection = Math.Atan(ricoDirection);
+        float angleDirection;
+        angleDirection = Convert.ToSingle(Math.Atan(ricoDirection));
 
-        float xVelocity;
-        xVelocity = Convert.ToSingle(Math.Cos(angleDirection));
+       transform.rotation = Quaternion.Euler(0, angleDirection, 0);
 
-        float zVelocity;
-        zVelocity = Convert.ToSingle(Math.Cos(angleDirection));
-
-        rb.velocity = new Vector3(xVelocity * speed, 0, zVelocity * speed);
+        rb.velocity = transform.forward * speed;
     }
 }
