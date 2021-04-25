@@ -47123,9 +47123,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2488775559254152967, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488775559729932106, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 279
+      objectReference: {fileID: 0}
     - target: {fileID: 2488775559729932107, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488775559729932107, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756035873777437300, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756035873777437300, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
+      propertyPath: m_TagString
+      value: PressE
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}

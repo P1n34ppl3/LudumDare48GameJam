@@ -97,5 +97,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pil: {fileID: 5808711926103216788}
-  Player: {fileID: 6262128591232162378, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
-  PressE: {fileID: 0}
+  PressE: {fileID: 8426744521178927831, guid: d872be7e7d115fd419934e5fdf7254c7, type: 3}

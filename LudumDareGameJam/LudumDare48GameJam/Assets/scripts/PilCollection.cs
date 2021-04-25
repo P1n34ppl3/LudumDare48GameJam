@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PilCollection : MonoBehaviour
 {
     public GameObject Pil;
-    public GameObject Player;
+    GameObject Player;
     public GameObject PressE;
     public static int pils;
 
+    void Start()
+    {
+        Player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     void Update()
     {
