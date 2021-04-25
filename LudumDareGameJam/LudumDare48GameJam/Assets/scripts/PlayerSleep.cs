@@ -8,7 +8,7 @@ public class PlayerSleep : MonoBehaviour
     
     public Animation anim;
     public GameObject PressE;
-
+    float timer = 1f;
 
     void Awake()
     {
@@ -17,6 +17,7 @@ public class PlayerSleep : MonoBehaviour
 
     void Update()
     {
+        timer -= Time.deltaTime;
         GameObject Sleep = GameObject.FindWithTag("Sleep");
 
         if (Vector3.Distance(Sleep.transform.position, transform.position) <= 15)
@@ -24,7 +25,7 @@ public class PlayerSleep : MonoBehaviour
             PressE.SetActive(true);
             if (Input.GetKey(KeyCode.E))
             {
-                Debug.Log("ok");
+                
                 if (anim.isPlaying != true)
                 {
                     anim.Play("ToSleep");
@@ -33,14 +34,17 @@ public class PlayerSleep : MonoBehaviour
                
             }
         }
-        else
+        if (timer <= 0f)
         {
             PressE.SetActive(false);
+            timer = 1f;
         }
+       
     }
     void Next()
     {
         Debug.Log("next scene");
     }
+
 
 }
