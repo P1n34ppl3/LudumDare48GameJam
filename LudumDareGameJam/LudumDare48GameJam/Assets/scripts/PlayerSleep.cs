@@ -48,7 +48,7 @@ public class PlayerSleep : MonoBehaviour
     }
     void Next()
     {
-        Debug.Log("next scene");
+        FindObjectOfType<GameManager>().GoNextScene();
     }
 
 
