@@ -42,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
         //Jump
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
+            FindObjectOfType<AudioManager>().Play("Jump");
             y = jumpStrength;
             jumped = 5;
         }
