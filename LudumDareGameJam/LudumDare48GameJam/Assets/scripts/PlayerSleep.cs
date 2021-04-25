@@ -31,7 +31,7 @@ public class PlayerSleep : MonoBehaviour
                     anim.Play("ToSleep");
                     Invoke("Next", 4f);
                 }
-               
+                PressE.SetActive(false);
             }
         }
         if (timer <= 0f)
