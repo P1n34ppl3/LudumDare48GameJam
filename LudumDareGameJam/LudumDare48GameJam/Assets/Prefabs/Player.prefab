@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2396097012072603189
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1814,7 +1814,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 392698810848249214}
-  player: {fileID: 0}
+  tipsAndObjectives: {fileID: 4631813622227724084}
+  objectiveText: {fileID: 8479164679663122883}
+  player: {fileID: 6262128591232162378}
   playerMovement: {fileID: 0}
-  mainCamera: {fileID: 0}
+  mainCamera: {fileID: 6262128591419479490}
   playerLook: {fileID: 0}
+  objectiveNumber: 0
