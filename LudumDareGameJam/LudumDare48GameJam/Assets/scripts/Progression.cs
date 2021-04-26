@@ -60,7 +60,6 @@ public class Progression : MonoBehaviour
         
         StoryHolder.SetActive(true);
         Story.text = Text[6];
-        yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
         Gamestage = 2;
         yield return new WaitUntil(() => Gamestage == 3);
