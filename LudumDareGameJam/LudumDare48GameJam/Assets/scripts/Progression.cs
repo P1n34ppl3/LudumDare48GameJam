@@ -10,40 +10,42 @@ public class Progression : MonoBehaviour
     int RepeatBlock = 0;
     public TextMeshProUGUI Story;
     public GameObject StoryHolder;
-    string Line;
+    public string[] Text;
+    private int index = 0;
+    int wait;
 
     void Awake()
     {
         Gamestage = 0;
+        StartCoroutine(Storyteller());
     }
-    void Update()
-    {
-        switch (Gamestage)
-        {
-            case 0:
-                if (RepeatBlock == 0)
-                {
-                    RepeatBlock = 1;
-                    Invoke("T1", 5f);
 
-                }
-                break;
-        }
-
-    }
-    void T1()
+    IEnumerator Storyteller()
     {
+        yield return new WaitForSeconds(20);
         StoryHolder.SetActive(true);
-        Story.text = "Insomnia. The terrible condition of not being able to sleep.";
-        if (Input.GetKey(KeyCode.T))
-        {
-            StoryHolder.SetActive(false);
-            Invoke("T1", 5f);
-        }
-        else
-        {
-            T1();
-        }
+        Story.text = Text[0];
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.E) == true);
+        StoryHolder.SetActive(false);
+        yield return new WaitForSeconds(wait);
+        StoryHolder.SetActive(true);
+        Story.text = Text[1];
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.E) == true);
+        StoryHolder.SetActive(false);
+        yield return new WaitForSeconds(wait);
+        StoryHolder.SetActive(true);
+        Story.text = Text[2];
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.E) == true);
+        StoryHolder.SetActive(false);
+        yield return new WaitForSeconds(wait);
+        StoryHolder.SetActive(true);
+        Story.text = Text[3];
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.E) == true);
+        StoryHolder.SetActive(false);
+        yield return new WaitForSeconds(wait);
+        Gamestage = 1;
+
+
     }
 
 }
