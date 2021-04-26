@@ -7,8 +7,8 @@ public class PlayerSleep : MonoBehaviour
 {
     
     public Animation anim;
-    public GameObject PressE;
-    float timer = 1f;
+
+
     
 
     void Awake()
@@ -18,36 +18,34 @@ public class PlayerSleep : MonoBehaviour
 
     void Update()
     {
-        timer -= Time.deltaTime;
+
         GameObject Sleep = GameObject.FindWithTag("Sleep");
 
         if (Vector3.Distance(Sleep.transform.position, transform.position) <= 15)
         {
             if (PilCollection.pils >= 3)
             {
-                PressE.SetActive(true);
+      
                 if (Input.GetKey(KeyCode.E))
                 {
 
                     if (anim.isPlaying != true)
                     {
                         anim.Play("ToSleep");
+                        PilCollection.pils = 0;
                         Invoke("Next", 4f);
                     }
-                    PressE.SetActive(false);
+
                 }
             }
             
         }
-        if (timer <= 0f)
-        {
-            PressE.SetActive(false);
-            timer = 1f;
-        }
+
        
     }
     void Next()
     {
+        Progression.Gamestage += 1;
         FindObjectOfType<GameManager>().GoNextScene();
     }
 

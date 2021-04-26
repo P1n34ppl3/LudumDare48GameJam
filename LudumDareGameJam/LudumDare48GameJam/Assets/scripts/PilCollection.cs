@@ -7,7 +7,7 @@ public class PilCollection : MonoBehaviour
 {
     public GameObject Pil;
     GameObject Player;
-    public GameObject PressE;
+
     public static int pils;
     public GameObject Holder;
 
@@ -24,7 +24,7 @@ public class PilCollection : MonoBehaviour
         {
             if (Vector3.Distance(Player.transform.position, transform.position) <= 15)
             {
-                PressE.SetActive(true);
+
                 if (Input.GetKey(KeyCode.E))
                 {
                     Holder.SetActive(false);

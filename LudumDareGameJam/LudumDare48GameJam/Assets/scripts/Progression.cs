@@ -20,7 +20,7 @@ public class Progression : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(Gamestage);
+       
     }
     IEnumerator Storyteller()
     {
@@ -57,11 +57,12 @@ public class Progression : MonoBehaviour
         yield return new WaitForSeconds(3f);
         StoryHolder.SetActive(false);
         yield return new WaitUntil(() => PilCollection.pils >= 3);
-        Gamestage = 2;
+        
         StoryHolder.SetActive(true);
         Story.text = Text[6];
         yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
+        Gamestage = 2;
         yield return new WaitUntil(() => Gamestage == 3);
         PilCollection.pils = 0;
         yield return new WaitForSeconds(wait);
