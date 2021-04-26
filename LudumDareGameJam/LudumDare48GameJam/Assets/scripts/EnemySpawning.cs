@@ -8,7 +8,7 @@ public class EnemySpawning : MonoBehaviour
     public GameObject EnemyPrefab;
     void Update()
     {
-        if (!monstersActive && (Progression.Gamestage >= 10))
+        if (!monstersActive && (Progression.Gamestage >= 9))
         {
             GameObject[] sheep = GameObject.FindGameObjectsWithTag("sheep");
             foreach(GameObject shep in sheep)
