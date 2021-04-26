@@ -21,7 +21,7 @@ public class KnifeScript : MonoBehaviour
 
             if (Input.GetKey(KeyCode.E))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+                FindObjectOfType<GameManager>().GoBack();
             }
         }
         else

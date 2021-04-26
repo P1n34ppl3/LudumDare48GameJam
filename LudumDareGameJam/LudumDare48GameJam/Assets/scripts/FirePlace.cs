@@ -36,11 +36,11 @@ public class FirePlace : MonoBehaviour
         {
             if (Progression.Gamestage < 10)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                FindObjectOfType<GameManager>().RestartScene();
             }
             else
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+                FindObjectOfType<GameManager>().GoBack();
             }
         }
     }
