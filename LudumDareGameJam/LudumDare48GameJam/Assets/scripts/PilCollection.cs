@@ -23,6 +23,7 @@ public class PilCollection : MonoBehaviour
         }
         else
         {
+            Debug.Log("ey");
             Pil.SetActive(false);
         }
 

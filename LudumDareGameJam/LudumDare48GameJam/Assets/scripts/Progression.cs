@@ -11,36 +11,39 @@ public class Progression : MonoBehaviour
     public GameObject StoryHolder;
     public string[] Text;
 
-    int wait;
+    int wait = 5;
 
     void Start()
     {
         Gamestage = 0;
         StartCoroutine(Storyteller());
     }
-
+    private void Update()
+    {
+        Debug.Log(Gamestage);
+    }
     IEnumerator Storyteller()
     {
         StoryHolder.SetActive(false);
         yield return new WaitForSecondsRealtime(2);
         StoryHolder.SetActive(true);
         Story.text = Text[0];
-        yield return new WaitUntil(() => Input.GetKey(KeyCode.E) == true);
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
         yield return new WaitForSeconds(wait);
         StoryHolder.SetActive(true);
         Story.text = Text[1];
-        yield return new WaitUntil(() => Input.GetKey(KeyCode.E) == true);
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
         yield return new WaitForSeconds(wait);
         StoryHolder.SetActive(true);
         Story.text = Text[2];
-        yield return new WaitUntil(() => Input.GetKey(KeyCode.E) == true);
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
         yield return new WaitForSeconds(wait);
         StoryHolder.SetActive(true);
         Story.text = Text[3];
-        yield return new WaitUntil(() => Input.GetKey(KeyCode.E) == true);
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
         Gamestage = 1;
         yield return new WaitUntil(() => PilCollection.pils >= 1);
@@ -57,26 +60,27 @@ public class Progression : MonoBehaviour
         Gamestage = 2;
         StoryHolder.SetActive(true);
         Story.text = Text[6];
-        yield return new WaitUntil(() => Input.GetKey(KeyCode.E) == true);
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
         yield return new WaitUntil(() => Gamestage == 3);
         PilCollection.pils = 0;
         yield return new WaitForSeconds(wait);
         StoryHolder.SetActive(true);
         Story.text = Text[7];
-        yield return new WaitUntil(() => Input.GetKey(KeyCode.E) == true);
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
         yield return new WaitForSeconds(wait);
         StoryHolder.SetActive(true);
-        Story.text = Text[3];
-        yield return new WaitUntil(() => Input.GetKey(KeyCode.E) == true);
+        Story.text = Text[8];
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
         Gamestage = 4;
         yield return new WaitUntil(() => PilCollection.pils >= 3);
         StoryHolder.SetActive(true);
-        Story.text = Text[3];
-        yield return new WaitUntil(() => Input.GetKey(KeyCode.E) == true);
+        Story.text = Text[9];
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
+        Gamestage = 5;
 
     }
 
