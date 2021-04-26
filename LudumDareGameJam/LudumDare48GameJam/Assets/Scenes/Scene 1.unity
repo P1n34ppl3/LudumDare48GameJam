@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.67932403, g: 0.73286986, b: 0.8046716, a: 1}
+  m_IndirectSpecularColor: {r: 0.67931646, g: 0.7328554, b: 0.8046639, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -46523,6 +46523,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Story: {fileID: 1856936738}
   StoryHolder: {fileID: 2067459926}
+  Text:
+  - 5
+  - 4
+  - 1
+  - 2
+  - 5
+  - 7
+  - 1
+  - 5
 --- !u!114 &1856936738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48770,6 +48779,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 5549709966656089272, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7756035873777437300, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -48777,6 +48790,34 @@ PrefabInstance:
     - target: {fileID: 7756035873777437300, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
       propertyPath: m_TagString
       value: PressE
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139925673915108898, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
+      propertyPath: Objectives.Array.size
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139925673915108898, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
+      propertyPath: Objectives.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139925673915108898, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
+      propertyPath: Objectives.Array.data[1]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139925673915108898, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
+      propertyPath: Objectives.Array.data[2]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139925673915108898, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
+      propertyPath: Objectives.Array.data[3]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139925673915108898, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
+      propertyPath: Objectives.Array.data[4]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139925673915108898, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
+      propertyPath: Objectives.Array.data[5]
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
