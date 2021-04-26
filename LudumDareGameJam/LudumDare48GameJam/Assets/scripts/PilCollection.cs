@@ -26,6 +26,7 @@ public class PilCollection : MonoBehaviour
             {
                 Pil.SetActive(false);
                 pils = pils + 1;
+                FindObjectOfType<AudioManager>().Play("Pill_Pickup");
                 Debug.Log(pils);
             }
         }
