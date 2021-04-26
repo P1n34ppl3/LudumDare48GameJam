@@ -9,9 +9,11 @@ public class PilCollection : MonoBehaviour
     GameObject Player;
     public GameObject PressE;
     public static int pils;
+    public GameObject Holder;
 
     void Start()
     {
+        Holder.SetActive(true);
         Pil.SetActive(true);
         Player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -25,7 +27,7 @@ public class PilCollection : MonoBehaviour
                 PressE.SetActive(true);
                 if (Input.GetKey(KeyCode.E))
                 {
-                    Pil.SetActive(false);
+                    Holder.SetActive(false);
                     pils = pils + 1;
                     FindObjectOfType<AudioManager>().Play("Pill_Pickup");
                     Debug.Log(pils);
