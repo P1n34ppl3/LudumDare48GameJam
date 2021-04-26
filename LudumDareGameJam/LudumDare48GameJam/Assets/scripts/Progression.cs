@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Progression : MonoBehaviour
 {
@@ -154,7 +155,7 @@ public class Progression : MonoBehaviour
         Story.text = Text[19];
         yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
-
+        SceneManager.LoadScene("Menu");
 
 
     }
