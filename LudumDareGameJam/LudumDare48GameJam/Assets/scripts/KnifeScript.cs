@@ -6,15 +6,10 @@ using UnityEngine.SceneManagement;
 public class KnifeScript : MonoBehaviour
 {
     public GameObject player;
-     public GameObject knifeCanvas;
-    public GameObject fire;
-    float igniteDistance;
-    int gameStage;
-    bool fireOn = false;
-
+    public GameObject knifeCanvas;
     void Start()
     {
-        fire.SetActive(false);
+        knifeCanvas.SetActive(false);
         player = GameObject.Find("Player");
     }
     void Update()
