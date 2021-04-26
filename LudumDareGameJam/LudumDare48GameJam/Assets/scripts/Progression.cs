@@ -22,7 +22,7 @@ public class Progression : MonoBehaviour
     IEnumerator Storyteller()
     {
         StoryHolder.SetActive(false);
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSecondsRealtime(2);
         StoryHolder.SetActive(true);
         Story.text = Text[0];
         yield return new WaitUntil(() => Input.GetKey(KeyCode.E) == true);
@@ -60,7 +60,23 @@ public class Progression : MonoBehaviour
         yield return new WaitUntil(() => Input.GetKey(KeyCode.E) == true);
         StoryHolder.SetActive(false);
         yield return new WaitUntil(() => Gamestage == 3);
-
+        PilCollection.pils = 0;
+        yield return new WaitForSeconds(wait);
+        StoryHolder.SetActive(true);
+        Story.text = Text[7];
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.E) == true);
+        StoryHolder.SetActive(false);
+        yield return new WaitForSeconds(wait);
+        StoryHolder.SetActive(true);
+        Story.text = Text[3];
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.E) == true);
+        StoryHolder.SetActive(false);
+        Gamestage = 4;
+        yield return new WaitUntil(() => PilCollection.pils >= 3);
+        StoryHolder.SetActive(true);
+        Story.text = Text[3];
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.E) == true);
+        StoryHolder.SetActive(false);
 
     }
 

@@ -20,7 +20,7 @@ public class Overlay : MonoBehaviour
 
     void UpdateTipsAndObjectives()
     {
-        objectiveText.text = Objectives[0];
+        objectiveText.text = Objectives[Progression.Gamestage];
     }
 
 
