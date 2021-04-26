@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pil: {fileID: 3245186093147076394}
   PressE: {fileID: 8426744521178927831, guid: d872be7e7d115fd419934e5fdf7254c7, type: 3}
+  Holder: {fileID: 918925689828815289}
 --- !u!1 &3103624255950018464
 GameObject:
   m_ObjectHideFlags: 0
