@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class EnemyMove : MonoBehaviour
 {   
     public GameObject player;
+    public GameObject deathScreen;
     public Rigidbody rb;
     public float speed;
     public float viewDistance;
@@ -14,6 +15,7 @@ public class EnemyMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player");
+        deathScreen = GameObject.Find("CaughtByNightmareScreen");
     }
     void Update()
     {   
@@ -25,6 +27,7 @@ public class EnemyMove : MonoBehaviour
         if (Vector3.Distance(player.transform.position, transform.position) < 12)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         }
     }
 
@@ -39,5 +42,16 @@ public class EnemyMove : MonoBehaviour
 
         
         rb.velocity = new Vector3(0, rb.velocity.y, 0) + transform.forward * speed;
+    }
+
+    void EnableDeathScreen()
+    {
+        deathScreen.SetActive(true);
+        Invoke("DisableDeathScreen", 2);
+    }
+
+    void DisableDeathScreen()
+    {
+        deathScreen.SetActive(false);
     }
 }
