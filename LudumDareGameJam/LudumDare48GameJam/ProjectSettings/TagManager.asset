@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Sleep
   - PressE
+  - sheep
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - sheep
   - Water
   - UI
   - Ground
