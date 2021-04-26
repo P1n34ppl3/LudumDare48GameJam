@@ -27,7 +27,6 @@ public class EnemyMove : MonoBehaviour
         
         if (Vector3.Distance(player.transform.position, transform.position) < 12)
         {   
-            Time.timeScale = 0;
             EnableDeathScreen(); 
         }
     }
@@ -54,6 +53,6 @@ public class EnemyMove : MonoBehaviour
     void DisableDeathScreen()
     {
         deathScreen.SetActive(false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        FindObjectOfType<GameManager>().GoBack();
     }
 }
