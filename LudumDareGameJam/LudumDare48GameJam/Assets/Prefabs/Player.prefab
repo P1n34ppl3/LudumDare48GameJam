@@ -489,9 +489,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dfcbc8fb73b5e4fa8f0cbfedce0610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipsAndObjectives: {fileID: 3758787268807207545}
   objectiveText: {fileID: 126786557706941582}
-  objectiveNumber: 0
+  Objectives:
+  - /
+  - Find 3 sleeping pills
+  - sleep in your bed
+  - /
+  - Find 3 sleeping pills
+  - sleep in your bed
+  - /
+  - Find 3 sleeping pills
+  - sleep in your bed
+  - /
+  - Try to wake up
+  - 'Kill yourself to wake up. Tip: Floating island'
+  - /
+  - 'Kill yourself to wake up. Tip: Hot!'
+  - /
+  - 'Kill yourself to wake up. Tip: Under the lanternpost'
+  - /
 --- !u!1 &2488775558045240760
 GameObject:
   m_ObjectHideFlags: 0
