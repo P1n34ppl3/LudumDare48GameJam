@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.SceneManagement;
 
 public class EnemyMove : MonoBehaviour
 {   
@@ -20,6 +20,11 @@ public class EnemyMove : MonoBehaviour
         if (Vector3.Distance(player.transform.position, transform.position) < viewDistance)
         {
             followPlayer();
+        }
+        
+        if (Vector3.Distance(player.transform.position, transform.position) < 12)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
