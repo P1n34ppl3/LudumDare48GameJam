@@ -24,11 +24,6 @@ public class EnemyMove : MonoBehaviour
         {
             followPlayer();
         }
-        
-        if (Vector3.Distance(player.transform.position, transform.position) < 12)
-        {   
-            EnableDeathScreen(); 
-        }
     }
 
     void followPlayer()
