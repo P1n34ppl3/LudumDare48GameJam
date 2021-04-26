@@ -79,7 +79,7 @@ public class Progression : MonoBehaviour
         yield return new WaitUntil(() => PilCollection.pils >= 3);
         StoryHolder.SetActive(true);
         Story.text = Text[9];
-        yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
+        yield return new WaitForSeconds(3);
         StoryHolder.SetActive(false);
         Gamestage = 5;
         yield return new WaitUntil(() => Gamestage == 6);
@@ -98,7 +98,7 @@ public class Progression : MonoBehaviour
         yield return new WaitUntil(() => PilCollection.pils >= 3);
         StoryHolder.SetActive(true);
         Story.text = Text[12];
-        yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
+        yield return new WaitForSeconds(3);
         StoryHolder.SetActive(false);
         Gamestage = 8;
         yield return new WaitUntil(() => Gamestage == 9);
