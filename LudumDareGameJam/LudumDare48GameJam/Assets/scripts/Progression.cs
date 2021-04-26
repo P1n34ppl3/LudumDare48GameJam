@@ -118,9 +118,15 @@ public class Progression : MonoBehaviour
         yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
         Gamestage = 10;
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(wait);
         StoryHolder.SetActive(true);
-        Story.text = Text[15];
+        Story.text = Text[16];
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
+        StoryHolder.SetActive(false);
+        Gamestage = 11;
+        yield return new WaitForSeconds(wait);
+        StoryHolder.SetActive(true);
+        Story.text = Text[17];
         yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
 
