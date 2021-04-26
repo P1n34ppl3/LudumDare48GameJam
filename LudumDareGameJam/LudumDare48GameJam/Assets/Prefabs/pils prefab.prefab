@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7816203317390493579}
   - component: {fileID: 5448314074231911233}
   - component: {fileID: 4212319485946387075}
+  - component: {fileID: 7872762926338988418}
   m_Layer: 0
   m_Name: pils prefab
   m_TagString: Untagged
@@ -26,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5808711926103216788}
-  m_LocalRotation: {x: -0.65925646, y: 0.25569695, z: 0.25569695, w: 0.65925646}
-  m_LocalPosition: {x: 68.43306, y: -1.1453414, z: 187.1894}
+  m_LocalRotation: {x: 0.039811015, y: -0.6398312, z: -0.7643576, w: 0.069199845}
+  m_LocalPosition: {x: 68.43306, y: -1.133092, z: 187.31102}
   m_LocalScale: {x: 67.637146, y: 67.637146, z: 67.63714}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -103.441, y: 500, z: 42.397995}
 --- !u!33 &7816203317390493579
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -98,3 +99,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pil: {fileID: 5808711926103216788}
   PressE: {fileID: 8426744521178927831, guid: d872be7e7d115fd419934e5fdf7254c7, type: 3}
+--- !u!95 &7872762926338988418
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5808711926103216788}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 31731f3935516f542972eb1090b1e33d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
