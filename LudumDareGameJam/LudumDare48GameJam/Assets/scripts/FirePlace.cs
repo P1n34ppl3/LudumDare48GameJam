@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FirePlace : MonoBehaviour
 {
@@ -33,13 +34,13 @@ public class FirePlace : MonoBehaviour
         }
         if ((Vector3.Distance(player.transform.position, transform.position) < 12.5) && fireOn)
         {
-            if (gameStage < 7)
+            if (Progression.Gamestage < 10)
             {
-                print("ded");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
             else
             {
-                print("ded");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             }
         }
     }
