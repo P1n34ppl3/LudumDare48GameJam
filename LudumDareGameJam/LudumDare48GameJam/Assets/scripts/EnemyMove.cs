@@ -15,6 +15,7 @@ public class EnemyMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player");
+        deathScreen = GameObject.Find("CaughtByNightmareScreen");
         deathScreen.SetActive(false);
     }
     void Update()

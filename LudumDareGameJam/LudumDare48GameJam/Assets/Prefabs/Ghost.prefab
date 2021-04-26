@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2488775559254152967, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
-  deathScreen: {fileID: 5919660982619210202, guid: ea2a03179c4133941932771bae67d338, type: 3}
+  deathScreen: {fileID: 0}
   rb: {fileID: 0}
   speed: 50
   viewDistance: 100
