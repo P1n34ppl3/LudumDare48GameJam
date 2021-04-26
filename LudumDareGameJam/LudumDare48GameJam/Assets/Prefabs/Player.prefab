@@ -490,6 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectiveText: {fileID: 126786557706941582}
+  deathScreen: {fileID: 0}
   Objectives:
   - /
   - Find 3 sleeping pills
@@ -984,7 +985,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2488775559254153021}
-  PressE: {fileID: 2488775559729932107}
 --- !u!136 &2488775559254153023
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1540,14 +1540,6 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8426744521178927830, guid: d872be7e7d115fd419934e5fdf7254c7, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 227.49007
-      objectReference: {fileID: 0}
-    - target: {fileID: 8426744521178927830, guid: d872be7e7d115fd419934e5fdf7254c7, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 278
-      objectReference: {fileID: 0}
-    - target: {fileID: 8426744521178927830, guid: d872be7e7d115fd419934e5fdf7254c7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -1565,11 +1557,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d872be7e7d115fd419934e5fdf7254c7, type: 3}
---- !u!1 &2488775559729932107 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8426744521178927831, guid: d872be7e7d115fd419934e5fdf7254c7, type: 3}
-  m_PrefabInstance: {fileID: 6230773316512560540}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2488775559729932106 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8426744521178927830, guid: d872be7e7d115fd419934e5fdf7254c7, type: 3}
