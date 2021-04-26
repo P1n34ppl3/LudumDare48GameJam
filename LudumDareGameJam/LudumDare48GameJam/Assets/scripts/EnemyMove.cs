@@ -13,6 +13,7 @@ public class EnemyMove : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
     void Update()
     {   
