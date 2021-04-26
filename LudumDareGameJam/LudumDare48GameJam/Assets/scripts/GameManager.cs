@@ -13,5 +13,6 @@ public class GameManager : MonoBehaviour
     public static void GoBack()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        Progression.Gamestage = 12;
     }
 }
