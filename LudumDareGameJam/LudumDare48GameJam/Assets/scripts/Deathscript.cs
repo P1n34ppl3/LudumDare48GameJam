@@ -6,6 +6,7 @@ public class Deathscript : MonoBehaviour
 {
     void OnTriggerEnter(Collider collider)
     {
-        FindObjectOfType<GameManager>().GoBack();
+        if (collider.CompareTag("Player"))
+            FindObjectOfType<GameManager>().GoBack();
     }
 }
