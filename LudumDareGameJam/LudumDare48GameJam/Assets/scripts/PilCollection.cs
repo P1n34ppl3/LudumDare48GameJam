@@ -12,6 +12,7 @@ public class PilCollection : MonoBehaviour
 
     void Start()
     {
+        Pil.SetActive(true);
         Player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -19,24 +20,24 @@ public class PilCollection : MonoBehaviour
     {
         if (Progression.Gamestage == 1 || Progression.Gamestage == 4 || Progression.Gamestage == 7)
         {
-            Pil.SetActive(true);
+            if (Vector3.Distance(Player.transform.position, transform.position) <= 15)
+            {
+                PressE.SetActive(true);
+                if (Input.GetKey(KeyCode.E))
+                {
+                    Pil.SetActive(false);
+                    pils = pils + 1;
+                    FindObjectOfType<AudioManager>().Play("Pill_Pickup");
+                    Debug.Log(pils);
+                }
+            }
         }
-        else
+        if (Progression.Gamestage > 9)
         {
-            Debug.Log("ey");
             Pil.SetActive(false);
         }
 
-        if (Vector3.Distance(Player.transform.position, transform.position) <= 15)
-        {
-            PressE.SetActive(true);
-            if (Input.GetKey(KeyCode.E))
-            {
-                Pil.SetActive(false);
-                pils = pils + 1;
-                FindObjectOfType<AudioManager>().Play("Pill_Pickup");
-                Debug.Log(pils);
-            }
-        }
+
+
     }
 }
