@@ -17,7 +17,14 @@ public class PilCollection : MonoBehaviour
 
     void Update()
     {
-        
+        if (Progression.Gamestage == 1 || Progression.Gamestage == 4 || Progression.Gamestage == 7)
+        {
+            Pil.SetActive(true);
+        }
+        else
+        {
+            Pil.SetActive(false);
+        }
 
         if (Vector3.Distance(Player.transform.position, transform.position) <= 15)
         {
