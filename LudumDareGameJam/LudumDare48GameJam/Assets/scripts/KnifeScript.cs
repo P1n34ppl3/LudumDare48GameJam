@@ -9,7 +9,7 @@ public class KnifeScript : MonoBehaviour
     public GameObject knifeCanvas;
     void Start()
     {   
-        knifeCanvas = GameObject.Find("KnifeCanvas");
+        knifeCanvas = GameObject.Find("knifeCanvas");
         knifeCanvas.SetActive(false);
         player = GameObject.Find("Player");
     }
