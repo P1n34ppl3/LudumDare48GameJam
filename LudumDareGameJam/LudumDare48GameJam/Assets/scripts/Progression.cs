@@ -17,16 +17,53 @@ public class Progression : MonoBehaviour
     void Start()
     {
         Gamestage = 0;
-        StartCoroutine(Storyteller());
+        S1();
     }
-    private void Update()
-    {
-       
-    }
-    IEnumerator Storyteller()
+    public void S1()
     {
         StoryHolder.SetActive(false);
-        yield return new WaitForSecondsRealtime(2);
+        PilCollection.pils = 0;
+        StartCoroutine(Scene1());
+    }
+    public void D1()
+    {
+        StoryHolder.SetActive(false);
+        PilCollection.pils = 0;
+        StartCoroutine(Dream1());
+    }
+    public void D2()
+    {
+        StoryHolder.SetActive(false);
+        PilCollection.pils = 0;
+        StartCoroutine(Dream2());
+    }
+    public void D3()
+    {
+        StoryHolder.SetActive(false);
+        PilCollection.pils = 0;
+        StartCoroutine(Dream3());
+    }
+    public void D2Re()
+    {
+        StoryHolder.SetActive(false);
+        StartCoroutine(Dream2Re());
+    }
+    public void D1Re()
+    {
+        StoryHolder.SetActive(false);
+        StartCoroutine(Dream1Re());
+    }
+    public void S1Re()
+    {
+        StoryHolder.SetActive(false);
+        StartCoroutine(Scene1Re());
+    }
+
+    IEnumerator Scene1()
+    {
+        Gamestage = 0;
+        StoryHolder.SetActive(false);
+        yield return new WaitForSeconds(10);
         StoryHolder.SetActive(true);
         Story.text = Text[0];
         yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
@@ -50,21 +87,23 @@ public class Progression : MonoBehaviour
         yield return new WaitUntil(() => PilCollection.pils >= 1);
         StoryHolder.SetActive(true);
         Story.text = Text[4];
-        yield return new WaitForSeconds(3f);
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
         yield return new WaitUntil(() => PilCollection.pils >= 2);
         StoryHolder.SetActive(true);
         Story.text = Text[5];
-        yield return new WaitForSeconds(3f);
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
         yield return new WaitUntil(() => PilCollection.pils >= 3);
-        
         StoryHolder.SetActive(true);
         Story.text = Text[6];
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
         Gamestage = 2;
-        yield return new WaitUntil(() => Gamestage == 3);
-        PilCollection.pils = 0;
+    }
+    IEnumerator Dream1()
+    {
+        Gamestage = 3;
         yield return new WaitForSeconds(wait);
         StoryHolder.SetActive(true);
         Story.text = Text[7];
@@ -79,11 +118,13 @@ public class Progression : MonoBehaviour
         yield return new WaitUntil(() => PilCollection.pils >= 3);
         StoryHolder.SetActive(true);
         Story.text = Text[9];
-        yield return new WaitForSeconds(3);
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
         Gamestage = 5;
-        yield return new WaitUntil(() => Gamestage == 6);
-        PilCollection.pils = 0;
+    }
+    IEnumerator Dream2()
+    {
+        Gamestage = 6;
         yield return new WaitForSeconds(wait);
         StoryHolder.SetActive(true);
         Story.text = Text[10];
@@ -98,21 +139,23 @@ public class Progression : MonoBehaviour
         yield return new WaitUntil(() => PilCollection.pils >= 3);
         StoryHolder.SetActive(true);
         Story.text = Text[12];
-        yield return new WaitForSeconds(3);
+        yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
         Gamestage = 8;
-        yield return new WaitUntil(() => Gamestage == 9);
-        PilCollection.pils = 0;
+    }
+    IEnumerator Dream3()
+    {
+        Gamestage = 9;
         yield return new WaitForSeconds(wait);
         StoryHolder.SetActive(true);
         Story.text = Text[13];
         yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
-        StoryHolder.SetActive(false); 
+        StoryHolder.SetActive(false);
         yield return new WaitForSeconds(wait);
         StoryHolder.SetActive(true);
         Story.text = Text[14];
         yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
-        StoryHolder.SetActive(false); 
+        StoryHolder.SetActive(false);
         yield return new WaitForSeconds(wait);
         StoryHolder.SetActive(true);
         Story.text = Text[15];
@@ -130,21 +173,29 @@ public class Progression : MonoBehaviour
         Story.text = Text[17];
         yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
-        yield return new WaitUntil(() => Gamestage == 12);
+    }
+    IEnumerator Dream2Re()
+    {
+        Gamestage = 12;
         yield return new WaitForSeconds(wait);
         StoryHolder.SetActive(true);
         Story.text = Text[18];
         yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
         Gamestage = 13;
-        yield return new WaitUntil(() => Gamestage == 14);
+    }
+    IEnumerator Dream1Re()
+    {
+        Gamestage = 14;
         yield return new WaitForSeconds(wait);
         StoryHolder.SetActive(true);
         Story.text = Text[19];
         yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
         Gamestage = 15;
-        yield return new WaitUntil(() => Gamestage == 16);
+    }
+    IEnumerator Scene1Re()
+    {
         yield return new WaitForSeconds(wait);
         StoryHolder.SetActive(true);
         Story.text = Text[19];
@@ -156,8 +207,7 @@ public class Progression : MonoBehaviour
         yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
         SceneManager.LoadScene("Menu");
-
-
     }
+    
 
 }

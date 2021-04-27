@@ -7,6 +7,7 @@ TagManager:
   - Sleep
   - PressE
   - sheep
+  - Progression
   layers:
   - Default
   - TransparentFX

@@ -8,12 +8,14 @@ public class PlayerSleep : MonoBehaviour
     
     public Animation anim;
 
-
+    
     
 
-    void Awake()
+    void Start()
     {
+        
         anim.Play("WakeUp");
+        
     }
 
     void Update()
@@ -23,7 +25,7 @@ public class PlayerSleep : MonoBehaviour
 
         if (Vector3.Distance(Sleep.transform.position, transform.position) <= 15)
         {
-            if (PilCollection.pils >= 3)
+            if (Progression.Gamestage == 2 || Progression.Gamestage == 5 || Progression.Gamestage == 8)
             {
       
                 if (Input.GetKey(KeyCode.E))
@@ -45,7 +47,10 @@ public class PlayerSleep : MonoBehaviour
     }
     void Next()
     {
-        Progression.Gamestage += 1;
+        
+
+        
+        
         FindObjectOfType<GameManager>().GoNextScene();
     }
 
