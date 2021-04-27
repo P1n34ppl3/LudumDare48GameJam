@@ -11,50 +11,66 @@ public class Progression : MonoBehaviour
     public TextMeshProUGUI Story;
     public GameObject StoryHolder;
     public string[] Text;
-
+    
     int wait = 5;
 
     void Start()
     {
-        Gamestage = 0;
-        S1();
+        if (GameManager.QuickFix == 0)
+        {
+            Gamestage = 0;
+            S1();
+            GameManager.QuickFix = 1;
+        }
+        
     }
     public void S1()
     {
+        StopCoroutine(Scene1());
         StoryHolder.SetActive(false);
         PilCollection.pils = 0;
         StartCoroutine(Scene1());
     }
     public void D1()
     {
+        StopCoroutine(Dream1());
         StoryHolder.SetActive(false);
         PilCollection.pils = 0;
         StartCoroutine(Dream1());
     }
     public void D2()
     {
+        StopCoroutine(Dream2());
         StoryHolder.SetActive(false);
         PilCollection.pils = 0;
         StartCoroutine(Dream2());
     }
     public void D3()
     {
+        StopCoroutine(Dream3());
         StoryHolder.SetActive(false);
         PilCollection.pils = 0;
         StartCoroutine(Dream3());
     }
     public void D2Re()
     {
+        StopCoroutine(Dream3());
+        StopCoroutine(Dream2Re());
         StoryHolder.SetActive(false);
         StartCoroutine(Dream2Re());
     }
     public void D1Re()
     {
+        StopCoroutine(Dream2Re());
+        StopCoroutine(Dream1Re());
         StoryHolder.SetActive(false);
         StartCoroutine(Dream1Re());
     }
     public void S1Re()
     {
+        StopCoroutine(Dream1Re());
+        StopCoroutine(Scene1Re());
+        StopCoroutine(Scene1());
         StoryHolder.SetActive(false);
         StartCoroutine(Scene1Re());
     }
@@ -176,6 +192,7 @@ public class Progression : MonoBehaviour
     }
     IEnumerator Dream2Re()
     {
+        yield return new WaitForSeconds(0.1f);
         Gamestage = 12;
         yield return new WaitForSeconds(wait);
         StoryHolder.SetActive(true);
@@ -186,6 +203,7 @@ public class Progression : MonoBehaviour
     }
     IEnumerator Dream1Re()
     {
+        yield return new WaitForSeconds(0.1f);
         Gamestage = 14;
         yield return new WaitForSeconds(wait);
         StoryHolder.SetActive(true);
@@ -196,6 +214,7 @@ public class Progression : MonoBehaviour
     }
     IEnumerator Scene1Re()
     {
+        yield return new WaitForSeconds(0.1f);
         yield return new WaitForSeconds(wait);
         StoryHolder.SetActive(true);
         Story.text = Text[19];
@@ -206,7 +225,7 @@ public class Progression : MonoBehaviour
         Story.text = Text[19];
         yield return new WaitUntil(() => Input.GetKey(KeyCode.T) == true);
         StoryHolder.SetActive(false);
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Menu 1");
     }
     
 

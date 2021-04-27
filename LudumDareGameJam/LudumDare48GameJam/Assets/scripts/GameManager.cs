@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject Script;
+    public static int QuickFix;
     public void GoNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -64,11 +65,17 @@ public class GameManager : MonoBehaviour
 
     public void GoBack()
     {
+        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        Invoke("fix2", 1);
+    }
+    void fix2()
+    {
         if (Progression.Gamestage == 9 || Progression.Gamestage == 10 || Progression.Gamestage == 11)
         {
             Script.GetComponent<Progression>().D2Re();
         }
-        if (Progression.Gamestage == 12 || Progression.Gamestage == 13 )
+        if (Progression.Gamestage == 12 || Progression.Gamestage == 13)
         {
             Script.GetComponent<Progression>().D1Re();
         }
@@ -76,7 +83,5 @@ public class GameManager : MonoBehaviour
         {
             Script.GetComponent<Progression>().S1Re();
         }
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-        
     }
 }
