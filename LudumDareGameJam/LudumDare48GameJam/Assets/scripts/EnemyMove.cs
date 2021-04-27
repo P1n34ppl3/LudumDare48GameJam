@@ -15,7 +15,7 @@ public class EnemyMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player");
-        deathScreen = GameObject.Find("CaughtByNightmareScreen");
+        deathScreen = GameObject.FindGameObjectWithTag("GhostScreen");
         deathScreen.SetActive(false);
     }
     void Update()
@@ -23,6 +23,10 @@ public class EnemyMove : MonoBehaviour
         if (Vector3.Distance(player.transform.position, transform.position) < viewDistance)
         {
             followPlayer();
+        }
+        if (Vector3.Distance(player.transform.position, transform.position) < 12)
+        {
+            EnableDeathScreen();
         }
     }
 
@@ -48,6 +52,6 @@ public class EnemyMove : MonoBehaviour
     void DisableDeathScreen()
     {
         deathScreen.SetActive(false);
-        FindObjectOfType<GameManager>().GoBack();
+        FindObjectOfType<GameManager>().RestartScene();
     }
 }

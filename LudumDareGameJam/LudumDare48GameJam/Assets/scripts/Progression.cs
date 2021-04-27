@@ -12,7 +12,7 @@ public class Progression : MonoBehaviour
     public GameObject StoryHolder;
     public string[] Text;
     
-    int wait = 5;
+    int wait = 1;
 
     void Start()
     {
