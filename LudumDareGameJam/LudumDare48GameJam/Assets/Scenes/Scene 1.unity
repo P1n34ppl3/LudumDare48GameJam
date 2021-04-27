@@ -48044,14 +48044,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2488775559729932107, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2488775559729932107, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 5549709966656089272, guid: 13ffe46e1e3efc74db84dd0cede879d6, type: 3}
       propertyPath: m_IsActive
       value: 1

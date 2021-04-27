@@ -966,7 +966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 020dbdfaa58beb043a3a7a291e14e1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 90
+  moveSpeed: 400
   gravityStrength: 300
   jumpStrength: 100
   groundLayer:
@@ -985,7 +985,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2488775559254153021}
-  Script: {fileID: 6185208856717975774, guid: 82a25d96a4e8002408db44bcbd9dd711, type: 3}
 --- !u!136 &2488775559254153023
 CapsuleCollider:
   m_ObjectHideFlags: 0
