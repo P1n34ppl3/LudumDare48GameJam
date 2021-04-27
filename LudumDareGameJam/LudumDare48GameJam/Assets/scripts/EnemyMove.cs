@@ -51,7 +51,8 @@ public class EnemyMove : MonoBehaviour
 
     void DisableDeathScreen()
     {
-        deathScreen.SetActive(false);
+        
         FindObjectOfType<GameManager>().RestartScene();
+        deathScreen.SetActive(false);
     }
 }

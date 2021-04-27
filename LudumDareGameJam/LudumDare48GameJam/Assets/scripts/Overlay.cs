@@ -8,14 +8,9 @@ public class Overlay : MonoBehaviour
 {
  
     public TextMeshProUGUI objectiveText;
-    public GameObject deathScreen;
     public string[] Objectives;
 
-    void Start()
-    {   
-        deathScreen = GameObject.Find("CaughtByNightmareScreen");
-        deathScreen.SetActive(false);
-    }
+
 
     void Update()
     {

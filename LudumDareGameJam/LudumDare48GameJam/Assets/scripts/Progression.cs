@@ -68,7 +68,7 @@ public class Progression : MonoBehaviour
     }
     public void S1Re()
     {
-        SceneManager.LoadScene("Menu 1");
+        SceneManager.LoadScene("Credits");
     }
 
     IEnumerator Scene1()
