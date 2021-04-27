@@ -489,7 +489,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectiveText: {fileID: 126786557706941582}
-  deathScreen: {fileID: 0}
   Objectives:
   - /
   - Find 3 sleeping pills
@@ -965,7 +964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 020dbdfaa58beb043a3a7a291e14e1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 400
+  moveSpeed: 90
   gravityStrength: 300
   jumpStrength: 100
   groundLayer:

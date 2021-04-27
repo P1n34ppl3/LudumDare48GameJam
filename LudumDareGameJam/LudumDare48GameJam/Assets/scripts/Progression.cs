@@ -12,7 +12,7 @@ public class Progression : MonoBehaviour
     public GameObject StoryHolder;
     public string[] Text;
     
-    int wait = 1;
+    int wait = 5;
 
     void Start()
     {
@@ -68,7 +68,7 @@ public class Progression : MonoBehaviour
     }
     public void S1Re()
     {
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("End");
     }
 
     IEnumerator Scene1()
